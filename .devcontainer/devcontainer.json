@@ -1,0 +1,21 @@
+{
+	"name": "SITK - Node Oracle Rest API",
+    "build": {
+        "dockerfile": "Dockerfile",
+	},
+	"mounts": [
+		"source=SITK-nodeOracleRestApi-bashhistory,target=/commandhistory,type=volume"
+	],
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+	"extensions": [
+		"eamodio.gitlens",
+		"esbenp.prettier-vscode",
+		"ms-azuretools.vscode-docker"
+	],
+	"runArgs":[
+		"-v", "/etc/localtime:/etc/localtime:ro",
+		"-v", "/etc/timezone:/etc/timezone:ro"
+	]
+}
